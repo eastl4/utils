@@ -64,11 +64,11 @@ public final class DateUtils {
     return localDateTimeToDate(endOfDay);
   }
 
-  private static LocalDateTime dateToLocalDateTime(Date date) {
+  public static LocalDateTime dateToLocalDateTime(Date date) {
     return LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault());
   }
 
-  static Date localDateTimeToDate(LocalDateTime localDateTime) {
+  public static Date localDateTimeToDate(LocalDateTime localDateTime) {
     return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
   }
 }
